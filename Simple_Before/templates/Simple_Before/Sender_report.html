@@ -1,0 +1,636 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+<div class = "title">
+    Stage 2: Sender answers questions
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class = "left_column">
+
+        <font size="+1">
+
+The {% if group.true_state == 1%} <b>Up</b> {% elif group.true_state == 2%}<b>Middle</b> {% else %}<b>Down</b> {% endif %} card is selected in this round. <br>
+
+<br><br>
+
+{% if subsession.round_number == 1 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Up_set1.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Middle_set1.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Down_set1.jpg" %}" width="200px"/>
+<br>
+
+{% endif %}
+
+{% elif subsession.round_number == 2 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Up_set2.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Middle_set2.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Down_set2.jpg" %}" width="200px"/>
+<br>
+
+{% endif %}
+
+
+{% elif subsession.round_number == 3 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Up_set3.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Middle_set3.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Down_set3.jpg" %}" width="200px"/>
+<br>
+
+{% endif %}
+
+
+{% elif subsession.round_number == 4 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Middle_set1.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Down_set1.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Up_set1.jpg" %}" width="200px"/>
+<br>
+
+{% endif %}
+
+
+{% elif subsession.round_number == 5 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Middle_set2.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Down_set2.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Up_set2.jpg" %}" width="200px"/>
+<br>
+
+{% endif %}
+
+
+{% elif subsession.round_number == 6 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Middle_set3.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Down_set3.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Up_set3.jpg" %}" width="200px"/>
+<br>
+
+{% endif %}
+
+
+
+{% elif subsession.round_number == 7 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Down_set1.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Up_set1.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Middle_set1.jpg" %}" width="200px"/>
+<br>
+
+{% endif %}
+
+
+{% elif subsession.round_number == 8 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Down_set2.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Up_set2.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Middle_set2.jpg" %}" width="200px"/>
+<br>
+
+{% endif %}
+
+
+{% elif subsession.round_number == 9 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Down_set3.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Up_set3.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Middle_set3.jpg" %}" width="200px"/>
+<br>
+
+{% endif %}
+
+
+
+{% elif subsession.round_number == 10 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Up_set4.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Middle_set4.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Down_set4.jpg" %}" width="200px"/>
+<br>
+
+{% endif %}
+
+{% elif subsession.round_number == 11 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Up_set5.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Middle_set5.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Down_set5.jpg" %}" width="200px"/>
+<br>
+
+{% endif %}
+
+
+{% elif subsession.round_number == 12 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Up_set6.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Middle_set6.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Down_set6.jpg" %}" width="200px"/>
+<br>
+
+{% endif %}
+
+
+{% elif subsession.round_number == 13 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Middle_set4.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Down_set4.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Up_set4.jpg" %}" width="200px"/>
+<br>
+
+{% endif %}
+
+
+{% elif subsession.round_number == 14 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Middle_set5.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Down_set5.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Up_set5.jpg" %}" width="200px"/>
+<br>
+
+{% endif %}
+
+
+{% elif subsession.round_number == 15 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Middle_set6.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Down_set6.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Up_set6.jpg" %}" width="200px"/>
+<br>
+
+{% endif %}
+
+
+
+{% elif subsession.round_number == 16 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Down_set4.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Up_set4.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Middle_set4.jpg" %}" width="200px"/>
+<br>
+
+{% endif %}
+
+
+{% elif subsession.round_number == 17 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Down_set5.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Up_set5.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Middle_set5.jpg" %}" width="200px"/>
+<br>
+
+{% endif %}
+
+
+{% elif subsession.round_number == 18 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Down_set6.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Up_set6.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Middle_set6.jpg" %}" width="200px"/>
+<br>
+
+
+{% endif %}
+
+
+{% elif subsession.round_number == 19 %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Up_set7.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Middle_set7.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Down_set7.jpg" %}" width="200px"/>
+<br>
+
+
+{% endif %}
+
+
+
+{% else %}
+
+
+{% if group.true_state == 1 %}
+
+<img src="{% static "Complexity/Simple_Up_set8.jpg" %}" width="200px"/>
+
+
+<br>
+
+{% elif group.true_state == 2 %}
+
+<img src="{% static "Complexity/Simple_Middle_set8.jpg" %}" width="200px"/>
+
+<br>
+
+{% else %}
+
+<img src="{% static "Complexity/Simple_Down_set8.jpg" %}" width="200px"/>
+<br>
+
+
+{% endif %}
+
+
+
+{% endif %}
+
+        </font>
+</div>
+
+<div class="right_column">
+        <font size="+1">
+
+              <p style="color:red;"> Note that the receiver can see the three sets of cards (Up, Middle and Down) while seeing your messages. </p>
+
+Please select your message about the drawn card in this round: <br>
+What's the drawn set in this round?
+
+{% formfield group.message %}
+
+<br>
+            Please select your messages about the three questions:
+
+<br>What's the background color of the card?</br>
+
+{% formfield group.report_first %}
+
+<br>What's the center shape of the card?</br>
+
+{% formfield group.report_second %}
+
+<br>What's the center letter of the card?</br>
+
+{% formfield group.report_third %}
+
+        </font>
+</div>
+
+<br><br>
+
+
+
+<div class = "Down_column">
+         <font size="+1">
+
+    <b>Reminder of Sender's Payoffs</b> <br>
+
+Your payoff is only dependent on the receiver's guess regardless of the drawn set. You get<br>
+    $15 if the receiver guesses Up.<br>
+    $12 if the receiver guesses Middle. <br>
+    $3 if the receiver guesses Down. <br><br>
+
+
+    <b>Reminder of Receiver's Payoffs</b> <br>
+You get the highest payoff for guessing correctly about the drawn set. <br>
+
+    If the drawn set is Up, you get $15 for guessing Up, $12 for guessing Middle, and $3 for guessing Down. <br>
+    If the drawn set is Middle, you get $15 for guessing Middle, $8 for guessing Up and $12 for guessing Down. <br>
+    If the drawn set is Down, you get $15 for guessing Down, $8 for guessing Middle and $3 for guessing Up. <br><br>
+
+    If you are uncertain about what the drawn set is:<br>
+    If you think the drawn set is equally likely to be Middle or Down, guessing Down leads to the highest expected payoff. <br>
+    If you think the drawn set is equally likely to be Up or Middle, guessing Middle leads to the highest expected payoff. <br>
+    If you think the drawn set is equally likely to be Up, Middle or Down, guessing Middle leads to the highest expected payoff. <br>
+
+
+
+
+<!--<br>The receiver can select 3 out of 20 elements in the card to ask you. <br>-->
+<!--The receiver observes both your answers to the set name (Up, Middle or Down) and the 3 questions before making the guess decision. <br>-->
+    </font>
+    </div>
+
+
+
+
+<div class = "break_box">
+  {% next_button %}
+
+</div>
+
+
+{% endblock %}
+
+
+
+
+{% block styles %}
+
+
+
+<style>
+
+div.title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom:10px;
+    margin-top:-25px;
+}
+
+
+div.left_column {
+        float: left;
+    width: 400px;
+    margin-left:-100px;;
+}
+
+div.right_column {
+        float: right;
+    width: 700px;
+    margin-right:-300px;
+}
+
+
+div.Down_column {
+        float: right;
+    width: 1200px;
+    margin-right:-150px;
+    border: 2px solid grey;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+ div.break_box {
+    vertical-align: middle;
+     clear: both;
+}
+
+
+</style>
+
+{% endblock %}
+
+

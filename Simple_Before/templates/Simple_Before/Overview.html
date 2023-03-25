@@ -1,0 +1,92 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+<div class = "title">
+   Instructions
+</div>
+{% endblock %}
+
+{% block content %}
+
+<font size="+1">
+This experiment has three parts. Your payment at the end of the experiment can depend on you answers in any of the three parts.
+    There are three sections of the experiment (Section 1, Section 2, and Section 3). Sections 1 and 2 each have 5 rounds. Section 3 has 10 rounds.
+    At the end of the experiment the computer will make a random draw among the numbers 1, 2 and 3.<br>
+    If the drawn number is 1, you will be paid for a random round from Section 1. <br>
+    If the drawn number is 2, you will be paid for a random round from Section 2. <br>
+    If the drawn number is 3, you will be paid for a round from Section 3, and which round it is will depend on questions you will answer later in this experiment.
+</font>
+
+<br><br>
+
+
+<!--The payoffs to each player are as follows:-->
+
+<!--<br><br>-->
+
+  <!--<table class = "Payoffs" cellpadding="10">-->
+        <!--<tr>-->
+            <!--<th></th>-->
+            <!--<th>Receiver Guess Up</th>-->
+            <!--<th>Receiver Guess Middle</th>-->
+            <!--<th>Receiver Guess Down</th>-->
+        <!--</tr>-->
+     <!--<tr>-->
+            <!--<th>Set is Up</th>-->
+            <!--<th>Sender 15, Receiver 15</th>-->
+            <!--<th>Sender 10, Receiver 10</th>-->
+            <!--<th>Sender 3, Receiver 3</th>-->
+        <!--</tr>-->
+           <!--<tr>-->
+            <!--<th>Set is Middle</th>-->
+            <!--<th>Sender 15, Receiver 10</th>-->
+            <!--<th>Sender 10, Receiver 15</th>-->
+            <!--<th>Sender 3, Receiver 8</th>-->
+        <!--</tr>-->
+      <!--<tr>-->
+            <!--<th>Set is Down</th>-->
+            <!--<th>Sender 15, Receiver 3</th>-->
+            <!--<th>Sender 10, Receiver 8</th>-->
+            <!--<th>Sender 3, Receiver 15</th>-->
+        <!--</tr>-->
+    <!--</table>-->
+
+<!--<br><br>-->
+
+
+{% next_button %}
+
+{% endblock %}
+
+
+
+
+{% block styles %}
+
+
+<style>
+div.title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom:10px;
+    margin-top:-25px;
+}
+
+
+div.Down_column {
+        float: right;
+    width: 1200px;
+    margin-right:-150px;
+    border: 2px solid grey;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+
+
+</style>
+
+{% endblock %}
+
+
