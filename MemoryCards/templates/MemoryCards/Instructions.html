@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+
+{% block title %}
+Memory Test
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<font size="+2">In the next page you will have {{Constants.time}} seconds to look at four cards with 20 elements. You will be asked to report all 20 elements afterwards. You will get a quarter for each question you correctly answer.</font>
+
+<br><br>
+{% next_button %}
+
+{% endblock %}
+

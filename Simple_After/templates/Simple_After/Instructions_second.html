@@ -1,0 +1,83 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+<div class = "title">
+   Instructions
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+    <font size="+1">
+
+{% if player.id_in_group == 1%}
+
+
+In the next page you will have <b>{{Constants.time}} seconds</b> to look at the three cards (Up, Middle and Down).<br><br>
+
+The receiver will also be looking at all three set of cards.<br>
+
+       In stage 2 only the drawn set of cards will be shown to you but not the other two undrawn sets, and you will answer the following three questions. <br><br>
+
+       What's the background color of the card? <br><br>
+
+What's the center shape of the card? <br><br>
+
+What's the center letter of the card? <br><br>
+
+                <b> Note that the receiver can see the three sets of cards (Up, Middle and Down) while seeing your messages. </b> <br><br>
+
+
+        You will play for 20 rounds of the decision problem. In each round the set of cards will be different.
+
+{% else %}
+
+In the next page you will have <b>{{Constants.time}} seconds</b> to look at the three cards (Up, Middle and Down).  <br><br>
+
+The sender is also looking at all three set of cards. <br>
+
+        In stage 2 only the drawn card will be shown to the sender but not the other two undrawn cards, and the sender will answer the following three questions. <br><br>
+
+       What's the background color of the card? <br><br>
+
+What's the center shape of the card? <br><br>
+
+What's the center letter of the card? <br><br>
+
+            <b> Note that you can see the three sets of cards (Up, Middle and Down) while seeing the sender's messages. </b> <br><br>
+
+        You will play for 20 rounds of the decision problem. In each round the cards will be different.
+{% endif %}
+<br><br>
+
+
+Click "Next" to see the full set of cards.
+
+    </font>
+
+{% next_button %}
+
+{% endblock %}
+
+
+
+
+{% block styles %}
+
+
+<style>
+div.title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom:10px;
+    margin-top:-25px;
+}
+
+
+</style>
+
+{% endblock %}
+
+

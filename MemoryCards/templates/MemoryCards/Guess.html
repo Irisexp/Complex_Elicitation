@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+
+Thanks for answering the questions. We would like to ask two more questions. You will get an extra $1 for each if your guess is correct. <br><br>
+
+How many questions do you think you answer correctly?
+
+{% formfield player.guess_yours %}
+
+What's your guess about the group average correct answers?<br>
+If the average is not an integer, you get $1 the difference between your guess and the group average is less than 0.5. <br>
+{% formfield player.guess_average %}
+
+
+
+<br><br>
+    {% next_button %}
+
+{% endblock %}

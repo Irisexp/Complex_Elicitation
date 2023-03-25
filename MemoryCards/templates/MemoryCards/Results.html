@@ -1,0 +1,21 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+Results
+{% endblock %}
+
+{% block content %}
+
+<font size="+2">The number of elements you got correctly is {{player.correct}}. <br>
+
+    The group average is {{group.average}}. <br>
+
+    Your guess about your correct answer is {{player.guess_yours}}. Your guess about the group average is {{player.guess_average}}. <br>
+
+   Your payoff in the memory task is {{player.round_payoff}}.</font>
+<br><br>
+
+    {% next_button %}
+
+{% endblock %}
