@@ -1,0 +1,59 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block content %}
+
+
+
+
+<font size="+1">
+
+
+ There are two cards, one is Red, and one is Blue. There is a number on each card. The red card's number is always 4, while the blue card's number can be 1, 4, and 5 with equal probability. <br>
+    Your payment will depend on the card you choose. You get $4 if you choose the Red card. <br>
+    If you choose the Blue card, you get $1 if the number on the Blue card is 1, $4 if the number on the Blue card is 4 and $5 if the number on the Blue card is 5. <br><br>
+
+
+
+First, we would like to know whether you would prefer to receiver the Red card or the Blue card:
+
+{% formfield player.card_choice %}
+
+<br><br>
+
+
+
+
+
+
+    {% next_button %}
+
+
+{% endblock %}
+
+
+{% block styles %}
+
+
+<style>
+div.title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom:10px;
+    margin-top:-25px;
+}
+
+
+div.Down_column {
+        float: right;
+    width: 1200px;
+    margin-right:-150px;
+    border: 2px solid grey;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+</style>
+
+{% endblock %}
+

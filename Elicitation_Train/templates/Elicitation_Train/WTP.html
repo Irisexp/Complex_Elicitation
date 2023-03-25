@@ -1,0 +1,185 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+
+
+{% block content %}
+
+
+
+
+<font size="+1">
+
+
+    {% if player.card_choice == 1 %}
+
+    Thank you for your answer.You said that you would like to receive the Red card. We will now ask you a series of follow-up questions.<br>
+
+    Each question asks which card you prefer:<br>
+   Option A. The Red Card  <br>
+   Option B. The Blue Card with an additional payment.
+<br><br>
+
+
+    The following table shows the questions. Notice each question provides a different amount of additional payment if you choose the Option B.
+    In each question you pick either Option A or Option B.  After you answer all 20 questions, we will randomly pick one of these questions.
+    Each of the 20 questions is equally like to be chosen.  If a question is chosen, then we will give the option that you chose for that question.
+    Obviously, you have no incentive to lie on any question, because if that question gets chosen for payment, and you did lie, then you end up with the option you like less.
+
+    <br><br>
+
+<table style="width:100%">
+  <tr>
+    <th>Question</th>
+    <th>Option A</th>
+    <th>Option B</th>
+  </tr>
+  <tr>
+    <td>Would you rather have:</td>
+    <td>Red Card</td>
+    <td>$0.1 plus Blue Card</td>
+  </tr>
+    <tr>
+    <td>Would you rather have:</td>
+    <td>Red Card</td>
+    <td>$0.2 plus Blue Card</td>
+  </tr>
+      <tr>
+    <td>Would you rather have:</td>
+    <td>Red Card</td>
+    <td>$0.3 plus Blue Card</td>
+  </tr>
+      <tr>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+  </tr>
+    <tr>
+    <td>Would you rather have:</td>
+    <td>Red Card</td>
+    <td>$2 plus Blue Card</td>
+  </tr>
+</table>
+
+
+    <br><br>
+
+
+We assume that you would like to choose Option A for (some) earlier questions, and at some point switch to Option B.  So to save your time, please tell us at which dollar value you would switch from Option A to Option B.
+    We can then fill out your answers to all twenty questions based on your switch point: choosing Option A for all questions where the additional payment for Option B is below the value of your switch point, and choosing Option B for all questions where the additional payment for Option B is at or above your switch point.
+    We will then randomly draw one of these questions to determine your payment.  Again, if you lie about your switch point you might end up getting paid based off an option you liked less.
+
+    <br><br>
+
+At which dollar value would you switch?
+{% formfield player.wtp %}
+
+
+    {% else %}
+
+    Thank you for your answer. You said that you would like to receive the Blue card. We will now ask you a series of follow-up questions.<br>
+
+    Each question asks which card you prefer:<br>
+   Option A. The Blue Card  <br>
+   Option B. The Red Card with an additional payment.
+<br><br>
+
+    The following table shows the questions. Notice each question provides a different amount of additional payment if you choose the Option B.
+    In each question you pick either Option A or Option B.  After you answer all 20 questions, we will randomly pick one of these questions.
+    Each of the 20 questions is equally like to be chosen.  If a question is chosen, then we will give the option that you chose for that question.
+    Obviously, you have no incentive to lie on any question, because if that question gets chosen for payment, and you did lie, then you end up with the option you like less.
+
+    <br><br>
+
+<table style="width:100%">
+  <tr>
+    <th>Question</th>
+    <th>Option A</th>
+    <th>Option B</th>
+  </tr>
+  <tr>
+    <td>Would you rather have:</td>
+    <td>Blue Card</td>
+    <td>$0.1 plus Red Card</td>
+  </tr>
+    <tr>
+    <td>Would you rather have:</td>
+    <td>Blue Card</td>
+    <td>$0.2 plus Red Card</td>
+  </tr>
+      <tr>
+    <td>Would you rather have:</td>
+    <td>Blue Card</td>
+    <td>$0.3 plus Red Card</td>
+  </tr>
+      <tr>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+  </tr>
+    <tr>
+    <td>Would you rather have:</td>
+    <td>Blue Card</td>
+    <td>$2 plus Red Card</td>
+  </tr>
+</table>
+
+    <br><br>
+
+
+We assume that you would like to choose Option A for (some) earlier questions, and at some point switch to Option B.  So to save your time, please tell us at which dollar value you would switch from Option A to Option B.
+    We can then fill out your answers to all twenty questions based on your switch point: choosing Option A for all questions where the additional payment for Option B is below the value of your switch point, and choosing Option B for all questions where the additional payment for Option B is at or above your switch point.
+    We will then randomly draw one of these questions to determine your payment.  Again, if you lie about your switch point you might end up getting paid based off an option you liked less.
+
+    <br><br>
+
+At which dollar value would you switch?
+{% formfield player.wtp %}
+
+    {% endif %}
+
+</font>
+
+
+
+<br><br>
+
+
+    {% next_button %}
+
+
+{% endblock %}
+
+
+
+{% block styles %}
+
+
+<style>
+
+table, th, td {
+  border:1px solid black;
+}
+
+div.title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom:10px;
+    margin-top:-25px;
+}
+
+
+div.Down_column {
+        float: right;
+    width: 1200px;
+    margin-right:-150px;
+    border: 2px solid grey;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+</style>
+
+{% endblock %}
+
+

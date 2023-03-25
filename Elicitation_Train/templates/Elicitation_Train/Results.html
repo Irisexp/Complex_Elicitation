@@ -1,0 +1,66 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+<div class = "title">
+Results
+</div>
+{% endblock %}
+
+{% block content %}
+
+<font size="+1">
+
+
+    The selected question is {{question}}, which corresponds to an additional payment of ${{player.number}} <br>
+    Your switch point is at ${{player.wtp}}.  <br>
+
+    The number on the blue card is {{player.blue}}. <br>
+
+    {% if player.card_choice == 1 %}
+    It indicated that you prefer {% if player.prefer == 0%} Option A (Red card) to Option B (Blue card plus the additional payment). {% else %} Option B (Blue card plus the additional payment) to Option A (Red card). {% endif %}  <br>
+
+    {% else %}
+        It indicated that you prefer {% if player.prefer == 0%} Option A (Blue card) to Option B (Red card and the additional payment). {% else %} Option B (Red card and the additional payment) to Option A (Blue card). {% endif %}  <br>
+
+{% endif %}
+
+You payment in this part is ${{player.round_payoff}}.
+
+
+
+</font>
+
+<br><br>
+
+{% next_button %}
+
+{% endblock %}
+
+
+{% block styles %}
+
+
+<style>
+div.title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom:10px;
+    margin-top:-25px;
+}
+
+
+div.Down_column {
+        float: right;
+    width: 1200px;
+    margin-right:-150px;
+    border: 2px solid grey;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+</style>
+
+{% endblock %}
+
+
